@@ -2,7 +2,7 @@
 <html>
     <head>
      <meta charset="UTF-8">
-        <title>Paga todas tus cuentas en un mismo lugar</title>
+        <title>Regístrate</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
     </head>
@@ -36,8 +36,52 @@
                <a class="nav-link" href="comentario.html">DEJA TU COMENTARIO</a>
             </li>
           </ul>
-        </nav>         
-          
+        </nav>
+
+        <section class = "style-formulario">
+
+                <label for="name">Nombres (*) </label>
+                <input class="estiloInput" type="text" id="name" name="name" placeholder="Guillermo" required="">
+                <br><br>
+                <label for="apellidop">Apellido paterno (*) </label>
+                <input class="estiloInput" type="text" id="apellidop" name="apellidop" placeholder="López" required="">
+                <br><br>     
+                <label for="apellidom">Apellido materno (*) </label>
+                <input class="estiloInput" type="text" id="apellidom" name="apellidom" placeholder="Vásquez" required="">
+                <br><br> 
+                <label for="rut">RUT (*) </label>
+                <input class="estiloInput" type="text" id="rut" name="rut" placeholder="12345678-9" required="">
+                <br><br> 
+                <label for="fono">Teléfono (*) </label>
+                <input class="estiloInput" type="text" id="fono" name="fono" placeholder="987654321" required="">
+                <br><br>
+                <label for="email">Email (*) </label>
+                <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" required="">
+                <br><br>
+                <label for="confemail">Confirmar Email (*) </label>
+                <input class="estiloInput" type="text" id="confemail" name="confemail" placeholder="ejemplo@email.com" required="">
+                <br><br>
+                <label for="pass">Contraseña (*) </label>
+                <input class="estiloInput" type="password" id="pass" name="pass" placeholder="Escriba su contraseña" required="">
+                <br><br>
+                <label for="confpass">Confirmar Contraseña (*) </label>
+                <input class="estiloInput" type="password" id="confpass" name="confpass" placeholder="Escriba su contraseña" required="">
+                <br><br>
+                <label for="lmensaje">Seleccione género:</label><br>
+                <input type="radio" id="hombre" name="genero" value="hombre">
+                <label for="lhombre">Hombre</label><br> 
+                <input type="radio" id="mujer" name="genero" value="mujer">
+                <label for="lmujer">Mujer</label><br> 
+                <input type="radio" id="otro" name="genero" value="otro">
+                <label for="lotro">Otro</label><br><br>
+                <input type="checkbox" id="terminos" name="terminos" value="yes">
+                <label for="terminos"> Al registrarte estás aceptando los Términos y Condiciones</label>
+                
+                <br><br>
+                <input class="botones" type="submit" value="Crear Usuario">
+                <br><br>
+         </section>         
+            
           
         <footer> <!--Footer-->
           <div class="container-fluid fondocolor">
