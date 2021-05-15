@@ -2,7 +2,7 @@
 <html>
     <head>
      <meta charset="UTF-8">
-        <title>Paga todas tus cuentas en un mismo lugar</title>
+        <title>Regístrate</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
     </head>
@@ -38,9 +38,42 @@
           </ul>
         </nav>
 
-
-       
-          
+        <div class="estilo_comentario">
+            <div class ="tarjeta">
+                <figure>
+                    <img src="img/contacto.jpg" width="100%">
+                </figure>
+                <section class = "contenido">
+                    <label for="name">Nombre completo (*) </label>
+                    <input class="estiloInput" type="text" id="name" name="name" placeholder="Guillermo Andrés López Vásquez" required="">
+                    <br><br>
+                    <label for="rut">RUT (*) </label>
+                    <input class="estiloInput" type="text" id="rut" name="rut" placeholder="12345678-9" required="">
+                    <br><br> 
+                    <label for="fono">Teléfono (*) </label>
+                    <input class="estiloInput" type="text" id="fono" name="fono" placeholder="987654321" required="">
+                    <br><br>
+                    <label for="email">Email (*) </label>
+                    <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" required="">
+                    <br><br>
+                    <select id="tipocomentario" name="tipocomentario">
+                        <option value="">- Selecciona una opción -</option>
+                        <option value="1">Sugerencia</option>
+                        <option value="2">Consulta</option>
+                        <option value="3">Reclamo</option>
+                      </select>
+                    <br><br>
+                    <label for="comentario">Comentario (*) </label>
+                    <textarea id="comentario" name="comentario" rows="5" cols="122" placeholder="Escribe aquí tus comentarios" required=""></textarea>
+                    <br><br>
+                    <input class="botones" type="submit" value="Enviar comentario">
+                <br><br>
+                </section>
+            </div>
+            
+            
+        </div>        
+            
           
         <footer> <!--Footer-->
           <div class="container-fluid fondocolor">
