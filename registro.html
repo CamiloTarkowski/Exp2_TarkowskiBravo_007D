@@ -2,6 +2,7 @@
 <html>
     <head>
      <meta charset="UTF-8">
+     <script src="js/validaciones.js"></script>
         <title>Regístrate</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -9,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
     <body>
       <nav class="navbar navbar-expand-sm barcolor"> <!--Menú de navegación-->
         <a class="navbar-brand" href="#">
@@ -40,46 +42,53 @@
 
         <section class = "style-formulario">
 
-                <label for="name">Nombres (*) </label>
-                <input class="estiloInput" type="text" id="name" name="name" placeholder="Guillermo" required="">
+            <h2 style="font-family: monospace;">Registro</h1>
+            <hr>
+            <form action="" method="post" name="datos" onsubmit="return valiRegistro()">
+                <label for="nombre">Nombres (*) </label>
+                <input class="estiloInput" type="text" id="nombre" name="nombre" placeholder="Guillermo" >
                 <br><br>
                 <label for="apellidop">Apellido paterno (*) </label>
-                <input class="estiloInput" type="text" id="apellidop" name="apellidop" placeholder="López" required="">
+                <input class="estiloInput" type="text" id="apellidop" name="apellidop" placeholder="López" >
                 <br><br>     
                 <label for="apellidom">Apellido materno (*) </label>
-                <input class="estiloInput" type="text" id="apellidom" name="apellidom" placeholder="Vásquez" required="">
+                <input class="estiloInput" type="text" id="apellidom" name="apellidom" placeholder="Vásquez" >
                 <br><br> 
                 <label for="rut">RUT (*) </label>
-                <input class="estiloInput" type="text" id="rut" name="rut" placeholder="12345678-9" required="">
+                <input class="estiloInput" type="text" id="rut" name="rut" placeholder="12345678-9" >
                 <br><br> 
                 <label for="fono">Teléfono (*) </label>
-                <input class="estiloInput" type="text" id="fono" name="fono" placeholder="987654321" required="">
+                <input class="estiloInput" type="number" id="fono" name="fono" placeholder="987654321" >
                 <br><br>
                 <label for="email">Email (*) </label>
-                <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" required="">
+                <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" >
                 <br><br>
                 <label for="confemail">Confirmar Email (*) </label>
-                <input class="estiloInput" type="text" id="confemail" name="confemail" placeholder="ejemplo@email.com" required="">
+                <input class="estiloInput" type="text" id="confemail" name="confemail" placeholder="ejemplo@email.com" >
                 <br><br>
                 <label for="pass">Contraseña (*) </label>
-                <input class="estiloInput" type="password" id="pass" name="pass" placeholder="Escriba su contraseña" required="">
+                <input class="estiloInput" type="password" id="pass" name="pass" placeholder="Escriba su contraseña">
                 <br><br>
                 <label for="confpass">Confirmar Contraseña (*) </label>
-                <input class="estiloInput" type="password" id="confpass" name="confpass" placeholder="Escriba su contraseña" required="">
+                <input class="estiloInput" type="password" id="confpass" name="confpass" placeholder="Escriba su contraseña" >
                 <br><br>
-                <label for="lmensaje">Seleccione género:</label><br>
-                <input type="radio" id="hombre" name="genero" value="hombre">
-                <label for="lhombre">Hombre</label><br> 
-                <input type="radio" id="mujer" name="genero" value="mujer">
-                <label for="lmujer">Mujer</label><br> 
-                <input type="radio" id="otro" name="genero" value="otro">
-                <label for="lotro">Otro</label><br><br>
+                <label for="opcion">Género: </label>
+                <select id="genero" name="opcion">
+                    <option value="">- Selecciona una opción -</option>
+                    <option value="1">Mujer</option>
+                    <option value="2">Hombre</option>
+                    <option value="3">Otro</option>
+                </select>
+                <hr>
                 <input type="checkbox" id="terminos" name="terminos" value="yes">
                 <label for="terminos"> Al registrarte estás aceptando los Términos y Condiciones</label>
-                
                 <br><br>
                 <input class="botones" type="submit" value="Crear Usuario">
                 <br><br>
+            </form>
+            
+    
+            
          </section>         
             
           

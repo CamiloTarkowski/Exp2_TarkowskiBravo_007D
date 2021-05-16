@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/validaciones.js"></script>
     <body>
       <nav class="navbar navbar-expand-sm barcolor"> <!--Menú de navegación-->
         <a class="navbar-brand" href="#">
@@ -40,10 +41,12 @@
 
         <div class="estilo_comentario">
             <div class ="tarjeta">
-                <figure>
-                    <img src="img/contacto.jpg" width="100%">
+                <figure class ="recorteimg">
+                    <img src="img/contacto.jpg" >
                 </figure>
                 <section class = "contenido">
+                    <h2 style="font-family: monospace;">Comentario</h1>
+                    <hr>
                     <label for="name">Nombre completo (*) </label>
                     <input class="estiloInput" type="text" id="name" name="name" placeholder="Guillermo Andrés López Vásquez" required="">
                     <br><br>
@@ -57,7 +60,7 @@
                     <input class="estiloInput" type="text" id="email" name="email" placeholder="ejemplo@email.com" required="">
                     <br><br>
                     <select id="tipocomentario" name="tipocomentario">
-                        <option value="">- Selecciona una opción -</option>
+                        <option value="">- Tipo de comentario -</option>
                         <option value="1">Sugerencia</option>
                         <option value="2">Consulta</option>
                         <option value="3">Reclamo</option>
@@ -65,7 +68,7 @@
                     <br><br>
                     <label for="comentario">Comentario (*) </label>
                     <textarea id="comentario" name="comentario" rows="5" cols="122" placeholder="Escribe aquí tus comentarios" required=""></textarea>
-                    <br><br>
+                    <hr>
                     <input class="botones" type="submit" value="Enviar comentario">
                 <br><br>
                 </section>
