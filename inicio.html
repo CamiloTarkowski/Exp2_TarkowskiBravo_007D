@@ -9,7 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <body>
 
   
@@ -41,11 +42,9 @@
             </li>
           </ul>
         </nav>
+
+
         <div class="style-inicio">
-
-
-          
-
                 <div class="container-fluid p-3  texto1 p1_inicio"> <!--container morado párrafo 1-->
                   <h1 >Te presentamos SimpleGasto</h1>
                   <p class="textopequeño">Un portal en donde encontrarás todas las facilidades para ir al día con todas tus cuentas. Tenemos compatibilidad con más de 200 empresas chilenas y con más de 100 empresas internacionales. Aquí podrás organizar tus gastos mensuales y planificar de una manera más rápida.</p>
@@ -83,16 +82,58 @@
                     <span class="carousel-control-next-icon"></span>
                   </a>
                 </div>
-
-                
                 <div class="container-fluid p-3 texto2 p1_inicio" style="box-shadow: 7px 13px 15px rgb(197, 196, 196); border-radius: 4px;"> <!--container amarillo párrafo 2-->
                   <h1>Olvídate de las cuentas con una transacción</h1>
                   <p class="textopequeño">Además, tendrás la posibilidad de hacer una transacción única, la que te pondrá al día de forma automática con la totalidad de tus deudas, o bien, también podrás realizar distintas transacciones acomodándote a la fecha de vencimiento de cada cuenta. Si quieres ahorrar tiempo en tus trámites mensuales, únete a nosotros y paga cómodamente.</p>
                 </div>
-          </div>  
+                <br>
+                <hr>
+                <h1 style="text-align: center;">Feriados en Chile, 2021 <img src="img/gobierno.png" width="10%" style="height:auto; border-radius: 4px;"></h1>
+                <hr>
+                <div id="caja">
+                  <button class="botones" type="button" id="mostrar">Mostrar </button>
+                                    
+              
+                    
+                </div>
+                <br><br>
+                <script type="text/javascript">
+                  $(document).ready(function()
+                  {
+                      $("#mostrar").click(function(){
+          
+                          $.get("https://apis.digital.gob.cl/fl/feriados/2021",
+                              function(data){
+                                  
+                                  $.each(data,function(i,item){
+                                      $("#fechas").append("<tr><td>"+item.nombre+"</td><td>"+item.fecha +
+                                      "</td><td>"+ item.tipo+ "</td></tr>");
+                                      
+          
+                                  });
+          
+                              });
+                      });
+                  })
+              </script>
+              </script>
 
-        
+                <table class="table" id="fechas">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Tipo</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+
+                </table>
+        </div>
+                
         <footer> <!--Footer-->
           <div class="container-fluid fondocolor">
             <p class="centertext">Camilo Tarkowski, Benjamín Bravo. @Copyrigth Derechos reservados.</p>
