@@ -27,7 +27,7 @@
 }
 
 .style-formulario{
-  width: 800px;
+  width: 50%;
   background: rgb(255, 255, 255);
   padding: 100px;
   margin: auto;
@@ -40,7 +40,7 @@
   box-shadow: 7px 13px 15px rgb(197, 196, 196);
 }
 .style-inicio{
-  width: 60%;
+  width: 50%;
   background: rgb(255, 255, 255);
   padding: 18px;
   margin: auto;
@@ -160,7 +160,7 @@ p{
 }
 
 .tarjeta{
-  width:60%;
+  width:50%;
   margin:10px;
   border-radius: 10px;
   overflow: hidden;
@@ -203,7 +203,7 @@ p{
   margin:auto;
 }
 .p2_inicio{
-
+  color:rgb(241, 239, 189);
 }
 
 
